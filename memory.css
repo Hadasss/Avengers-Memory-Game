@@ -1,0 +1,100 @@
+@font-face {
+  src: url(./Bangers-Regular.ttf);
+  font-family: bangers;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #dfdbe5;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+#head {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+  margin: 2px;
+  padding: 1px;
+  font-family: "bangers";
+  letter-spacing: 3px;
+  background-color: #ffffff;
+  border: black solid 3px;
+  box-shadow: 0 3px 10px black;
+}
+
+h1 {
+  padding-bottom: 5px;
+  margin: 2px;
+}
+
+h3 {
+  padding: 5px;
+  margin: 2px;
+}
+
+#board {
+  height: 600px;
+  width: 800px;
+  background-color: #ffffff;
+  border: black solid 3px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px black;
+}
+
+#board .card {
+  height: 22%;
+  width: 31%;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  margin: calc(0.5% - 1px);
+  border: grey solid 2px;
+  box-shadow: 0 2px 5px black;
+}
+
+#board .card.OK .front {
+  display: none;
+}
+
+#board .card.clicked .front {
+  transform: rotateY(90deg);
+}
+
+#board .card:hover .front {
+  /*   transform: rotateX(90deg);    */
+}
+
+#board .card .front {
+  height: 100%;
+  width: 100%;
+  margin: calc(0.5% - 1px);
+  border: grey solid 4pk;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: 0.5s ease-in-out all;
+}
+
+#board .card .back {
+  height: 100%;
+  width: 100%;
+  margin: calc(0.5% - 1px);
+  border-radius: 5%;
+  border: grey solid 4pk;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#board .card img {
+  height: 100%;
+  width: 100%;
+  border: grey solid 4pk;
+}
