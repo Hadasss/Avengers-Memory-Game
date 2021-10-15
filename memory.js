@@ -64,7 +64,7 @@ cards.forEach(function (item, index) {
         d2 = new Date();
         setTimeout(function () {
           alert(
-            "YOU DID IT!! You finished on: " +
+            "YOU DID IT!! You finished in: " +
               Math.floor((d2 - d1) / 1000) +
               " seconds. Number of clicks: " +
               clicks +
